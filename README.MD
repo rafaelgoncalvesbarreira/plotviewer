@@ -7,7 +7,7 @@ Helper to visualizer graph from [Matplotlib](https://matplotlib.org/) using [Tki
 Download the project and run:
 
 ```bash
-pip install .
+python pip install .
 ```
 
 ## Usage
