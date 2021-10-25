@@ -1,4 +1,4 @@
-# PloViewer
+# PlotViewer
 
 Helper to visualizer graph from [Matplotlib](https://matplotlib.org/) using [Tkinter](https://docs.python.org/3/library/tkinter.html) as GUI
 
