@@ -1,15 +1,12 @@
 import tkinter as tk
-import matplotlib.pyplot as plt
 
 from matplotlib.backends.backend_tkagg import (
     FigureCanvasTkAgg, NavigationToolbar2Tk)
 # Implement the default Matplotlib key bindings.
-from matplotlib.backend_bases import key_press_handler
 from matplotlib.figure import Figure
 
-root = tk.Tk()
-
 def show(figure, width=800, heigtht=500):
+  root = tk.Tk()
   root.minsize(width, heigtht)
   root.wm_title("Plot Viewer")
 
@@ -20,11 +17,11 @@ def show(figure, width=800, heigtht=500):
   toolbar = NavigationToolbar2Tk(canvas, root)
   toolbar.update()
 
+  def _quit():
+      root.quit()  
+      root.destroy()
+      
   button = tk.Button(master=root, text="Close", command=_quit)
   button.pack(side=tk.BOTTOM)
   
   root.mainloop()
-
-def _quit():
-    root.quit()  
-    root.destroy()
